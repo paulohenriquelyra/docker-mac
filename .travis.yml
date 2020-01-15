@@ -6,4 +6,4 @@ before_install:
     - docker build -t paulo/docker-mac -f Dockerfile.dev .
 
 script:
-    - docker run  paulo/docker-mac npm run test -- --coverage
+    - docker run -e CI=true paulo/docker-mac npm run test -- --coverage
